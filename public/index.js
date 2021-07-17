@@ -3,7 +3,7 @@
   const list = document.getElementsByClassName('favorites-list')[0];
   const newFavoriteInput = document.getElementsByClassName('favorite-input')[0];
 
-  fetch('http://localhost:3000/api/v1/favorites', {
+  fetch('https://still-bayou-35303.herokuapp.com/api/v1/favorites', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -25,7 +25,7 @@
     evt.preventDefault();
     const data = { data: newFavoriteInput.value };
 
-    fetch('http://localhost:3000/api/v1/favorites', {
+    fetch('https://still-bayou-35303.herokuapp.com/api/v1/favorites', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
