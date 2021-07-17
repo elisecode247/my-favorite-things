@@ -30,6 +30,6 @@ app.get('/', (req, res) => {
   res.send('index.html');
 });
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+app.listen(process.env.PORT || port, () => {
+  console.log(`App listening at ${port}`);
 });
