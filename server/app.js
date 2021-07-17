@@ -5,6 +5,7 @@ const data = require('./favs.json');
 const fs = require('fs');
 
 app.use(express.json());
+app.use(express.static('public'));
 
 app.post('/api/v1/favorites', (req, res) => {
   if (!req.body.data) {
@@ -26,7 +27,7 @@ app.get('/api/v1/favorites', (req, res) => {
 
 app.get('/', (req, res) => {
   console.log('Received a get request for the main page');
-  res.send('Hello World!');
+  res.send('index.html');
 });
 
 app.listen(port, () => {
